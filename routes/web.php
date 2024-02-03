@@ -22,7 +22,7 @@ Route::get('/', function () {
 });
 
 Route::get('/data', 'App\Http\Controllers\PegawaiController@index');
-Route::post('/import', 'App\Http\Controllers\PegawaiController@pegawaiimport')->name('import');
+Route::post('/import', 'App\Http\Controllers\DataController@datapsimport')->name('import');
 
 Route::get('/agency', [AgencyController::class, 'index']);
 Route::get('/spv', [SpvController::class, 'index']);

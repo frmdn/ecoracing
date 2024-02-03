@@ -10,6 +10,7 @@ use App\Models\Pegawai;
 use App\Imports\PegawaiImport;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 
 class PegawaiController extends BaseController
@@ -26,6 +27,7 @@ class PegawaiController extends BaseController
         $file = $request->file('file');
         $namaFile = $file->getClientOriginalName();
         $file->move('DataPegawai', $namaFile);
+        DB::table('pegawais')->truncate();
 
         Excel::import(new PegawaiImport, public_path('/DataPegawai/'.$namaFile));
         return redirect('data');
