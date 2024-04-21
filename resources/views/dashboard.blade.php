@@ -9,11 +9,11 @@
 					<h1 class="h3 mb-3"><strong>Analytics</strong> Dashboard</h1>
 
 					<div class="row">
-						<div class="col d-flex">
-							<div class="w-100">
+						<div class="col-12 col-lg-4 col-xxl-3 d-flex">
+							<div class="flex-fill w-100">
 								<div class="row">
-									<div class="col-lg-4">
-                  @foreach ($dataps as $d)
+									<div class="col-12">
+                  		@foreach ($dataps as $d)
 										<div class="card">
 											<div class="card-body">
 												<div class="row">
@@ -41,9 +41,44 @@
 							</div>
 						</div>
 
+						<div class="col-12 col-lg-8 col-xxl-9 d-flex">
+							<div class="card flex-fill">
+								<div class="card-header">
+
+									<h5 class="card-title mb-0">Top 8 PS</h5>
+								</div>
+								<table class="table table-hover my-0">
+									<thead>
+										<tr>
+											<th>Kode Sales</th>
+											<th class="d-none d-xl-table-cell">Team Leader</th>
+											<th class="d-none d-xl-table-cell">Agency</th>
+											<th class="d-none d-md-table-cell">Total PS</th>
+										</tr>
+									</thead>
+									<tbody>
+										@foreach($toptensf as $t)
+										<tr>
+											<td>{{ $t-> sfname }}</td>
+											<td class="d-none d-xl-table-cell">{{ $t-> spv }}</td>
+											<td class="d-none d-xl-table-cell">{{ $t-> agensi }}</td>
+											<td class="d-none d-md-table-cell">{{ $t-> jml_ps }}</td>
+										</tr>
+										@endforeach
+									</tbody>
+								</table>
+							</div>
+						</div>
 
 
-				</div>
+				
+					</div>
+
+				
+
+
+			
+
 			</main>
 
 <main class="content">

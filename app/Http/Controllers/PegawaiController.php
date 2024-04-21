@@ -26,7 +26,8 @@ class PegawaiController extends BaseController
         //      ->groupBy('STO')
         //      ->get();
         $dataps = DB::select('select * from vw_rekap');
-        return view('dashboard', compact('users','dataps'));
+        $toptensf = DB::select('select * from vw_topten_sf');
+        return view('dashboard', compact('users','dataps','toptensf'));
     }
 
     public function pegawaiimport(Request $request) {
