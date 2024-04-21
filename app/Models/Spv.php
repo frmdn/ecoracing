@@ -11,11 +11,11 @@ class Spv extends Model
 
     public function agency()
     {
-        return $this->belongsTo(Agency::class);
+        return $this->belongsTo(Agency::class, 'agency_id','singkatan_agency');
     }
 
     public function salesforce()
     {
-        return $this->hasMany(Salesforce::class);
+        return $this->hasMany(Salesforce::class, 'spv_id', 'kode_spv');
     }
 }

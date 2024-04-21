@@ -11,6 +11,6 @@ class Salesforce extends Model
 
     public function spv() 
     {
-        return $this->belongsTo(Spv::class);
+        return $this->belongsTo(Spv::class, 'spv_id','kode_spv');
     }
 }
