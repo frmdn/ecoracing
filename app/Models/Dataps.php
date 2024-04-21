@@ -9,4 +9,5 @@ class Dataps extends Model
 {
     use HasFactory;
 
+    protected $guarded = ['id'];
 }

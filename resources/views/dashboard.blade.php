@@ -6,6 +6,49 @@
 <main class="content">
 				<div class="container-fluid p-0">
 
+					<h1 class="h3 mb-3"><strong>Analytics</strong> Dashboard</h1>
+
+					<div class="row">
+						<div class="col d-flex">
+							<div class="w-100">
+								<div class="row">
+									<div class="col-lg-4">
+                  @foreach ($dataps as $d)
+										<div class="card">
+											<div class="card-body">
+												<div class="row">
+													<div class="col mt-0">
+														<h5 class="card-title">{{$d->clusters}}</h5>
+													</div>
+
+													<div class="col-auto">
+														<div class="stat text-primary">
+															<i class="align-middle" data-feather="truck"></i>
+														</div>
+													</div>
+												</div>
+												<h1 class="mt-1 mb-3">{{ $d->total_ps}}</h1>
+												<div class="mb-0">
+													<span class="text-danger"> <i class="mdi mdi-arrow-bottom-right"></i> -3.65% </span>
+													<span class="text-muted">Since last week</span>
+												</div>
+											</div>
+										</div>
+										@endforeach
+									</div>
+									
+								</div>
+							</div>
+						</div>
+
+
+
+				</div>
+			</main>
+
+<main class="content">
+				<div class="container-fluid p-0">
+
 					
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -37,35 +80,12 @@
   </div>
 </div>
 
-<div class="card flex-fill">
-<div class="card-header">
 
-<h5 class="card-title mb-0">List Karyawan</h5>
-</div>
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-  @foreach ($users as $user)
-    <tr>
-      <th scope="row">{{ $loop->iteration }}</th>
-      <td>{{ $user->nama }}</td>
-      <td>{{ $user->nik }}</td>
-      <td>{{ $user->loker }}</td>
-    </tr>
-    @endforeach
-  </tbody>
-</table>
-</div>
 
-				</div>
 			</main>
+
+
+      
 
 
 @endsection
