@@ -74,6 +74,12 @@ class CreateDatapsTable extends Migration
             $table->longText('QC_EVIDENCE')->nullable();
             $table->string('MSISDN_ORBIT')->nullable();
             $table->string('SN_ORBIT')->nullable();
+            $table->string('PROVCOMP_DATE')->nullable();
+            $table->string('EAI_COMPLETED_DATE')->nullable();
+            $table->string('SF')->nullable();
+            $table->string('TL')->nullable();
+            $table->string('AGENCY')->nullable();
+            $table->string('NAMA_TL')->nullable();
             $table->timestamps();
         });
     }

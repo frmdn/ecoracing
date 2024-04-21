@@ -74,7 +74,13 @@ class DatapsImport implements ToModel
             'PRODUCT' => $row[55],
             'QC_EVIDENCE' => $row[56],
             'MSISDN_ORBIT' => $row[57],
-            'SN_ORBIT' => $row[58]
+            'SN_ORBIT' => $row[58],
+            'PROVCOMP_DATE' => $row[59],
+            'EAI_COMPLETED_DATE' => $row[60],
+            'SF' => $row[61],
+            'TL' => $row[62],
+            'AGENCY' => $row[63],
+            'NAMA_TL' => $row[64]
         ]);
     }
 }
